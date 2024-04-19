@@ -16,7 +16,8 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const hostname = '0.0.0.0';
+const port = process.env.PORT || 8080; // Default port is 8080 if PORT is not set
+app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
 });
