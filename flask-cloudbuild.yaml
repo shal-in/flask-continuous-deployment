@@ -1,7 +1,7 @@
 steps:
   # Step 1: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/practice-projects-420709/flask/flask-continuous-deployment:0b259d7', '.']
+    args: ['build', '-t', 'gcr.io/practice-projects-420709/flask/flask-continuous-deployment:0b259d7' '-f', 'flask-Dockerfile', '.']
 
   # Step 2: Push the Docker image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
